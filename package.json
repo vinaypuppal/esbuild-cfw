@@ -1,0 +1,24 @@
+{
+  "name": "workers-esbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "yarn tsc",
+    "build": "node build.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "vinaypuppal",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.2.2",
+    "esbuild": "^0.12.9",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "worktop": "^0.7.0"
+  }
+}
