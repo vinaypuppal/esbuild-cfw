@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "AndrewRazumovsky.vscode-styled-jsx-languageserver",
     "bierner.lit-html",
     "bodil.prettier-toml",
     "bradlc.vscode-tailwindcss",
@@ -23,7 +22,6 @@
     "heybourn.headwind",
     "kisstkondoros.vscode-gutter-preview",
     "martellaj.license-injector",
-    "matklad.rust-analyzer",
     "mattpocock.xstate-vscode",
     "mikestead.dotenv",
     "ms-azuretools.vscode-docker",
@@ -33,13 +31,10 @@
     "PKief.material-icon-theme",
     "Prisma.prisma",
     "sdras.night-owl",
-    "serayuzgur.crates",
     "ssmi.after-dark",
     "svelte.svelte-vscode",
-    "tauri-apps.tauri-vscode",
     "tombonnike.vscode-status-bar-format-toggle",
     "usernamehw.errorlens",
-    "vadimcn.vscode-lldb",
     "VisualStudioExptTeam.vscodeintellicode",
     "vivaxy.vscode-conventional-commits",
     "wix.vscode-import-cost"
