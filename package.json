@@ -1,5 +1,5 @@
 {
-  "name": "workers-esbuild",
+  "name": "esbuild-cfw",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   },
   "keywords": [],
   "author": "vinaypuppal",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@cloudflare/workers-types": "^2.2.2",
     "@types/jest": "^27.0.2",

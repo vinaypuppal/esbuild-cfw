@@ -1,5 +1,5 @@
 compatibility_date = "2021-11-13"
-name = "workers-esbuild"
+name = "esbuild-cfw"
 type = "javascript"
 zone_id = ""
 account_id = ""
