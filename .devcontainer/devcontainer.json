@@ -21,7 +21,7 @@
   "forwardPorts": [8787],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "mkdir -p ~/.wrangler/config && printf api_token=\"${CFW_TOKEN}\" > ~/.wrangler/config/default.toml && yarn install",
+  "postCreateCommand": "mkdir -p ~/.wrangler/config && echo 'api_token=\"'\"$CFW_TOKEN\"'\"' > ~/.wrangler/config/default.toml && yarn install",
 
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "node",
