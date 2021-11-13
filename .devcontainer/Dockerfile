@@ -15,6 +15,3 @@ FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 # [Optional] Uncomment if you want to install more global node modules
 # RUN su node -c "npm install -g <your-package-list-here>"
 RUN su node -c "npm i @cloudflare/wrangler -g"
-
-# Configure the wrangler
-RUN su node -c "printf api_token=\"${CFW_TOKEN}\" > ~/.wrangler/config/default.toml"
