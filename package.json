@@ -14,7 +14,8 @@
     "dev:wrangler": "wrangler dev",
     "deploy": "wrangler publish",
     "format": "prettier --write  '*.{json,js,ts,md,mjs}' 'src/**/*.{js,ts}'",
-    "test": "jest --verbose"
+    "test": "jest",
+    "test:watch": "yarn test --watch"
   },
   "keywords": [],
   "author": "vinaypuppal",

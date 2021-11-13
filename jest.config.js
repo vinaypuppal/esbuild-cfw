@@ -1,4 +1,5 @@
 module.exports = {
+  verbose: true,
   preset: 'ts-jest/presets/js-with-ts',
   testEnvironment: 'node',
   automock: false,
@@ -7,4 +8,5 @@ module.exports = {
   },
   testRegex: '/tests/.*\\.test\\.ts$',
   collectCoverageFrom: ['src/**/*.{ts,js}'],
+  watchPathIgnorePatterns: ['node_modules', 'dist'],
 };
