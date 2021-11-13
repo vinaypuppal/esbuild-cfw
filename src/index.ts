@@ -7,6 +7,10 @@ router.get('/hello/:username', ({ response, params }) => {
   response.body = `Hello ${params.username}`;
 });
 
+router.get('/', ({ response }) => {
+  response.body = `Hello!`;
+});
+
 app.use(router.middleware);
 
 addEventListener('fetch', event => {

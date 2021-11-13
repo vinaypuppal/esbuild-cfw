@@ -1,4 +1,6 @@
-require('esbuild')
+import * as esbuild from 'esbuild';
+
+esbuild
   .build({
     entryPoints: ['src/index.ts'],
     format: 'iife',

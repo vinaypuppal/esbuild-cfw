@@ -1,0 +1,42 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16]
+    name: Deploy
+    steps:
+      - name: Checkout Commit
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v2
+        with:
+          always-auth: true
+          node-version: ${{ matrix.node }}
+          registry-url: https://npm.pkg.github.com
+          scope: '@rapidsec-com'
+      - name: Cache yarn dependencies
+        uses: actions/cache@v2
+        id: cache-dependencies
+        with:
+          path: 'node_modules'
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        # Check for `cache-hit` (`steps.cache-dependencies.cache-hit != 'true'`)
+        # If there's a cache hit, we skip this step (the dependencies are already available)
+        # If there's no cache hit, we run "yarn install"
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: yarn install --force --non-interactive
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: 'production'
