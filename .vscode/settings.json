@@ -38,6 +38,6 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "breadcrumbs.enabled": true,
-  "git.confirmSync": true,
+  "git.confirmSync": false,
   "git.autofetch": true
 }
