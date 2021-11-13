@@ -1,0 +1,5 @@
+{
+  "name": "esbuild-cfw",
+  "postCreateCommand": ["yarn", "install"],
+  "postAttachCommand": ["yarn", "dev"]
+}
