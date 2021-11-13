@@ -1,18 +1,15 @@
-import { Router } from "worktop";
-import { listen } from "worktop/cache";
+import { Sunder, Router } from "sunder";
 
-const API = new Router();
+const app = new Sunder();
+const router = new Router();
 
-API.add("GET", "/greet/:name", (req, res) => {
-  res.end(`Hello, ${req.params.name}!`);
+router.get("/hello/:username", ({ response, params }) => {
+  response.body = `Hello ${params.username}`;
 });
 
-API.add("GET", "/", (req, res) => {
-  const command = `<a href="https://${req.hostname}/greet/vinay" target="_blank">link</a>`;
+app.use(router.middleware);
 
-  res.setHeader("Cache-Control", "public,max-age=60");
-  res.setHeader("Content-Type", "text/html");
-  res.end(`Howdy~! Please greet yourself; Click this ${command}`);
+addEventListener("fetch", (event) => {
+  const resp = app.handle(event);
+  event.respondWith(resp);
 });
-
-listen(API.run);
