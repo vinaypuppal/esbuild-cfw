@@ -10,16 +10,18 @@
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts,tsx,mjs}' --quiet --fix",
     "build": "node build.mjs",
-    "dev": "wrangler dev",
+    "dev": "miniflare --watch --debug",
+    "dev:wrangler": "wrangler dev",
     "deploy": "wrangler publish",
     "format": "prettier --write  '*.{json,js,ts,md,mjs}' 'src/**/*.{js,ts}'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
   },
   "keywords": [],
   "author": "vinaypuppal",
   "license": "ISC",
   "devDependencies": {
     "@cloudflare/workers-types": "^2.2.2",
+    "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "esbuild": "^0.12.9",
@@ -29,7 +31,10 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest": "^27.3.1",
+    "miniflare": "^1.4.1",
     "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
     "typescript": "^4.3.4"
   },
   "dependencies": {
