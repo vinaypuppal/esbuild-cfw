@@ -307,6 +307,11 @@
   resolved "https://registry.npmjs.org/@cloudflare/workers-types/-/workers-types-2.2.2.tgz"
   integrity sha512-kaMn2rueJ0PL1TYVGknTCh0X0x0d9G+FNXAFep7/4uqecEZoQb/63o6rOmMuiqI09zLuHV6xhKRXinokV/MY9A==
 
+"@cloudflare/workers-types@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-3.1.1.tgz#d5bae190fb83af48a3b2c7f09e7b0037725fbcdf"
+  integrity sha512-7NnSrdUJ1EdmJyMImKemlcOyjRCc9GYc939Ih5Lab9Mg4T5KvTMdHQDSUXFZJObPnS0YuYMcyfLJTmxWJj+1Sw==
+
 "@eslint/eslintrc@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.0.4.tgz#dfe0ff7ba270848d10c5add0715e04964c034b31"
