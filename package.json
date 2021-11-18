@@ -21,7 +21,7 @@
   "author": "vinaypuppal",
   "license": "MIT",
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.1.1",
+    "@cloudflare/workers-types": "^3.2.0",
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
